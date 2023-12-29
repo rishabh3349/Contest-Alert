@@ -18,7 +18,7 @@
 
 <p align="center">
 
-<img src="https://github.com/rishabh3349/Contest-Alert/assets/116977210/7331bef9-1993-47b7-9082-290552c909f9">
+<img src="https://github.com/rishabh3349/Contest-Alert/assets/116977210/9aaf5ab2-85f4-4cf2-a1f5-39a3761dbc81">
 
 
 ## If you liked the project don't forget to star 🌟 and fork 🍽 the project.
