@@ -1,6 +1,7 @@
 package com.example.contestalert.ui.screens
 
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
@@ -11,6 +12,10 @@ import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.contestalert.ContestAlertApplication
 import com.example.contestalert.data.ContestAlertRepository
 import com.example.contestalert.model.ContestAlert
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import retrofit2.HttpException
 import java.io.IOException
@@ -22,6 +27,18 @@ sealed interface ContestUiState {
     object Loading : ContestUiState
 }
 class ContestViewModel (private val contestAlertRepository: ContestAlertRepository):ViewModel(){
+    val visiblePermissionDialogQueue= mutableStateListOf<String>()
+    fun dismissDialog(){
+        visiblePermissionDialogQueue.removeLast()
+    }
+    fun onPermissionResult(
+      permission:String,
+      isGranted:Boolean
+    ){
+        if(!(isGranted)){
+            visiblePermissionDialogQueue.add(0,permission)
+        }
+    }
     var contestUiState: ContestUiState by mutableStateOf(ContestUiState.Loading)
         private set
     init{

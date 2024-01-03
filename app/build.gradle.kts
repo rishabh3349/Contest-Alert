@@ -70,6 +70,15 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:4.11.0")
     implementation("io.coil-kt:coil-compose:2.4.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
+    testImplementation("junit:junit:4.12")
+
+    //swipe down to refresh
+    implementation ("androidx.swiperefreshlayout:swiperefreshlayout:1.0.0")
+    implementation ("androidx.compose.material3:material3:1.0.0-alpha14")
+    implementation ("androidx.compose.foundation:foundation:1.0.0-alpha07")
+    implementation ("androidx.compose.runtime:runtime:1.0.0-alpha07")
+    implementation ("com.google.accompanist:accompanist-swiperefresh:0.26.5-rc")
+
 
     androidTestImplementation(platform("androidx.compose:compose-bom:2023.06.01"))
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
