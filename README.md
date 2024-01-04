@@ -4,7 +4,7 @@
 
 <img src="https://github.com/rishabh3349/Contest-Alert/assets/116977210/3e327242-03b7-4a0e-8da8-0c7f3231344f" width="700">
 
-#### Contest Alert gives you update about the upcoming coding contest on CodeForces.
+#### Contest Alert gives you update about the upcoming coding contest on CodeForces. It also notifies you when the contest is about to start.
 
 ## 🛠 Tech Used
 - Android
