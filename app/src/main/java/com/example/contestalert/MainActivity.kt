@@ -38,7 +38,6 @@ import retrofit2.HttpException
 import java.io.IOException
 
 class MainActivity : ComponentActivity() {
-    private lateinit var requestLauncher: ActivityResultLauncher<String>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
